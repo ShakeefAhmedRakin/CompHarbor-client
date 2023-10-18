@@ -24,6 +24,14 @@ const AuthProvider = ({ children }) => {
     return createUserWithEmailAndPassword(auth, email, password);
   };
 
+  const addUsernamePhoto = (username, photoURL) => {
+    setLoading(true);
+    return updateProfile(auth.currentUser, {
+      displayName: username,
+      photoURL: photoURL,
+    });
+  };
+
   const signInUser = (email, password) => {
     setLoading(true);
     return signInWithEmailAndPassword(auth, email, password);
@@ -41,11 +49,9 @@ const AuthProvider = ({ children }) => {
   useEffect(() => {
     const unSubscribe = onAuthStateChanged(auth, async (currentUser) => {
       if (currentUser) {
-        // Check if the user already has displayName and photoURL
         const hasDisplayName = !!currentUser.displayName;
         const hasPhotoURL = !!currentUser.photoURL;
 
-        // If no displayName, set it to the part before '@' in the email
         if (!hasDisplayName) {
           const emailParts = currentUser.email.split("@");
           const username = emailParts[0];
@@ -54,7 +60,6 @@ const AuthProvider = ({ children }) => {
           });
         }
 
-        // If no photoURL, set the fixed one
         if (!hasPhotoURL) {
           await updateProfile(currentUser, {
             photoURL:
@@ -82,6 +87,7 @@ const AuthProvider = ({ children }) => {
     signInUser,
     logOut,
     signInWithGoogle,
+    addUsernamePhoto,
   };
   return (
     <>
