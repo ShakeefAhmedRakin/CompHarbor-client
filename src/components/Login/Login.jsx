@@ -1,11 +1,11 @@
-import { useContext, useState } from "react";
+import { useContext } from "react";
 import { RiGoogleLine } from "react-icons/ri";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../providers/AuthProvider";
+import { Toaster, toast } from "sonner";
 
 const Login = () => {
   const { signInUser, signInWithGoogle } = useContext(AuthContext);
-  const [error, setError] = useState("");
 
   const handleGoogleSignIn = () => {
     signInWithGoogle()
@@ -23,15 +23,15 @@ const Login = () => {
 
     signInUser(email, password)
       .then(() => {
-        setError("");
-        // TOAST HERE
+        toast.success("Successfully logged in");
       })
       .catch((error) => {
-        setError(error.message);
+        toast.error(error.message);
       });
   };
   return (
     <>
+      <Toaster position="bottom-right" richColors />
       <div className="container mx-auto px-4 py-20">
         <div className="max-w-lg mx-auto">
           <div className="border-[1px] border-black p-8">
@@ -76,9 +76,6 @@ const Login = () => {
                 <Link className="link" to="/register">
                   Sign Up Here
                 </Link>
-              </p>
-              <p className="text-red-500 font-medium w-full text-[10px]">
-                {error ? <>{error}</> : ""}
               </p>
             </form>
             <hr className="my-5" />

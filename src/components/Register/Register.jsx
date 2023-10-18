@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../providers/AuthProvider";
+import { Toaster, toast } from "sonner";
 
 const Register = () => {
   const { createUser, addUsernamePhoto, signInUser, logOut } =
@@ -31,6 +32,7 @@ const Register = () => {
                   console.log("User has been logged in successfully");
                   console.log("-------------------------------------");
                   console.log(result.user);
+                  toast.success("Successfully registered");
                 })
                 .catch((error) => {
                   console.log("Error from logging in user" + error);
@@ -42,11 +44,12 @@ const Register = () => {
           });
       })
       .catch((error) => {
-        console.log("Error from creating user: " + error);
+        toast.error(error.message);
       });
   };
   return (
     <>
+      <Toaster position="bottom-right" richColors />
       <div className="container mx-auto px-4 py-20">
         <div className="max-w-lg mx-auto">
           <div className="border-[1px] border-black p-8">
