@@ -67,12 +67,14 @@ const Navbar = () => {
             >
               {user ? (
                 <>
-                  <div className="flex md:hidden justify-center items-center gap-2 bg-violet-800 py-[5.5px] pl-[3.5px] pr-2 rounded-lg text-white">
-                    <img
-                      src={user?.photoURL}
-                      className="w-10 h-10 rounded-lg"
-                    />
-                    <p>{user?.displayName}</p>
+                  <div className="flex justify-center">
+                    <div className="flex md:hidden justify-center items-center gap-2 bg-transparent border-[1px] border-black py-[2.55px] pl-[3.5px] pr-2">
+                      <img
+                        src={user?.photoURL}
+                        className="w-10 h-10 rounded-full"
+                      />
+                      <p className="text-black">{user?.displayName}</p>
+                    </div>
                   </div>
                 </>
               ) : (
@@ -92,12 +94,12 @@ const Navbar = () => {
             <>
               {user.displayName ? (
                 <>
-                  <div className="hidden md:flex justify-center items-center gap-2 mr-2 bg-violet-800 py-[3.5px] pl-[3.5px] pr-2 rounded-lg">
+                  <div className="hidden md:flex justify-center items-center gap-2 mr-2 bg-transparent border-[1px] border-black py-[2.55px] pl-[3.5px] pr-2">
                     <img
                       src={user?.photoURL}
-                      className="w-10 h-10 rounded-lg"
+                      className="w-10 h-10 rounded-full"
                     />
-                    <p>{user?.displayName}</p>
+                    <p className="text-black">{user?.displayName}</p>
                   </div>
                 </>
               ) : (

@@ -47,32 +47,9 @@ const AuthProvider = ({ children }) => {
   };
 
   useEffect(() => {
-    const unSubscribe = onAuthStateChanged(auth, async (currentUser) => {
-      if (currentUser) {
-        const hasDisplayName = !!currentUser.displayName;
-        const hasPhotoURL = !!currentUser.photoURL;
-
-        if (!hasDisplayName) {
-          const emailParts = currentUser.email.split("@");
-          const username = emailParts[0];
-          await updateProfile(currentUser, {
-            displayName: username,
-          });
-        }
-
-        if (!hasPhotoURL) {
-          await updateProfile(currentUser, {
-            photoURL:
-              "https://www.alchinlong.com/wp-content/uploads/2015/09/sample-profile-320x320.png",
-          });
-        }
-
-        setUser(currentUser);
-        setLoading(false);
-      } else {
-        setUser(null);
-        setLoading(false);
-      }
+    const unSubscribe = onAuthStateChanged(auth, (currentUser) => {
+      setUser(currentUser);
+      setLoading(false);
     });
 
     return () => {

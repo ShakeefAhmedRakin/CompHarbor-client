@@ -1,12 +1,56 @@
+import { useContext } from "react";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../../providers/AuthProvider";
 
 const Register = () => {
+  const { createUser, addUsernamePhoto, signInUser, logOut } =
+    useContext(AuthContext);
+
+  const handleSignUp = (e) => {
+    e.preventDefault();
+
+    const form = e.target;
+
+    const username = form.username.value;
+    const photoURL = form.photoURL.value;
+    const email = form.email.value;
+    const password = form.password.value;
+
+    createUser(email, password)
+      .then((result) => {
+        addUsernamePhoto(username, photoURL)
+          .then(() => {
+            console.log("User has been registered successfully");
+            console.log("-------------------------------------");
+            console.log(result.user);
+            logOut().then(() => {
+              console.log("User has been logged out successfully");
+              console.log("-------------------------------------");
+              signInUser(email, password)
+                .then((result) => {
+                  console.log("User has been logged in successfully");
+                  console.log("-------------------------------------");
+                  console.log(result.user);
+                })
+                .catch((error) => {
+                  console.log("Error from logging in user" + error);
+                });
+            });
+          })
+          .catch((error) => {
+            console.log("Error from setting username and picture: " + error);
+          });
+      })
+      .catch((error) => {
+        console.log("Error from creating user: " + error);
+      });
+  };
   return (
     <>
       <div className="container mx-auto px-4 py-20">
         <div className="max-w-lg mx-auto">
           <div className="border-[1px] border-black p-8">
-            <form>
+            <form onSubmit={handleSignUp}>
               <h1 className="text-center font-bold text-4xl">Sign Up</h1>
               <hr className="my-5" />
               <div className="mb-6">
@@ -27,7 +71,7 @@ const Register = () => {
                 </label>
                 <input
                   type="text"
-                  name="profile_photo"
+                  name="photoURL"
                   className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-purple-500 focus:border-purple-500 block w-full p-2.5 "
                   placeholder="Your Profile Photo"
                   required
