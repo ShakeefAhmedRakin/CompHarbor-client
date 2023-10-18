@@ -1,26 +1,32 @@
 [
-    {
-      "name": "MSI",
-      "image": "https://i.ibb.co/xL15Z3W/MSI-Logo.png"
-    },
-    {
-      "name": "Gigabyte",
-      "image": "https://i.ibb.co/0rsqx3L/Gigabyte-logo.png"
-    },
-    {
-      "name": "Intel",
-      "image": "https://i.ibb.co/RcLvyQ1/Intel-logo.png"
-    },
-    {
-      "name": "AMD",
-      "image": "https://i.ibb.co/BwzDFf8/AMD-logo.png"
-    },
-    {
-      "name": "HyperX",
-      "image": "https://i.ibb.co/rHH3xBR/Hyper-X-logo.jpg"
-    },
-    {
-      "name": "COUGAR",
-      "image": "https://i.ibb.co/JxRBMx4/Cougar-logo.png"
-    }
-  ]
+  {
+    "id": 1,
+    "name": "MSI",
+    "image": "https://i.ibb.co/xL15Z3W/MSI-Logo.png"
+  },
+  {
+    "id": 2,
+    "name": "Gigabyte",
+    "image": "https://i.ibb.co/0rsqx3L/Gigabyte-logo.png"
+  },
+  {
+    "id": 3,
+    "name": "Intel",
+    "image": "https://i.ibb.co/RcLvyQ1/Intel-logo.png"
+  },
+  {
+    "id": 4,
+    "name": "AMD",
+    "image": "https://i.ibb.co/BwzDFf8/AMD-logo.png"
+  },
+  {
+    "id": 5,
+    "name": "HyperX",
+    "image": "https://i.ibb.co/rHH3xBR/Hyper-X-logo.jpg"
+  },
+  {
+    "id": 6,
+    "name": "COUGAR",
+    "image": "https://i.ibb.co/JxRBMx4/Cougar-logo.png"
+  }
+]
