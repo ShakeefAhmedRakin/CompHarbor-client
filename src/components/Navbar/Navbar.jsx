@@ -23,7 +23,20 @@ const Navbar = () => {
       <li className="navigation-link">
         <NavLink to="/add-product">Add Product</NavLink>
       </li>
+      <li className="navigation-link">
+        <NavLink to="/my-cart">My Cart</NavLink>
+      </li>
       {user && <>{/* PRIVATE ROUTES */}</>}
+    </>
+  );
+
+  const logo = (
+    <>
+      <a className="btn bg-transparent hover:bg-transparent hover:border-black hover:scale-[1.02] normal-case text-2xl border-[1px] border-black rounded-none">
+        <h1 className="font-medium text-text tracking-widest flex items-center gap-x-1">
+          <PiComputerTowerBold></PiComputerTowerBold>Comp Harbor
+        </h1>
+      </a>
     </>
   );
 
@@ -65,14 +78,11 @@ const Navbar = () => {
               ) : (
                 ""
               )}
-              {links}
+              <div className="flex md:hidden justify-center">{logo}</div>
+              <div className="flex items-center flex-col gap-3">{links}</div>
             </ul>
           </div>
-          <a className="btn bg-transparent hover:bg-transparent hover:border-black hover:scale-[1.02] normal-case text-2xl hidden md:flex border-[1px] border-black rounded-none">
-            <h1 className="font-medium text-text tracking-widest flex items-center gap-x-1">
-              <PiComputerTowerBold></PiComputerTowerBold>Comp Harbor
-            </h1>
-          </a>
+          <div className="hidden md:flex">{logo}</div>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="px-1 text-lg hidden lg:flex gap-6">{links}</ul>

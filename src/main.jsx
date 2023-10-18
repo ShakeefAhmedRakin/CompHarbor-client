@@ -6,6 +6,7 @@ import Root from "./components/Root/Root";
 import Home from "./components/Home/Home";
 import AuthProvider from "./providers/AuthProvider";
 import AddProduct from "./components/AddProduct/AddProduct";
+import Cart from "./components/Cart/Cart";
 
 const router = createBrowserRouter([
   {
@@ -20,6 +21,10 @@ const router = createBrowserRouter([
       {
         path: "/add-product",
         element: <AddProduct></AddProduct>,
+      },
+      {
+        path: "/my-cart",
+        element: <Cart></Cart>,
       },
     ],
   },
