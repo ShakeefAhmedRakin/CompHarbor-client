@@ -1,12 +1,44 @@
 import { useLoaderData } from "react-router-dom";
 import { Rating } from "@smastrom/react-rating";
+import { AuthContext } from "../../providers/AuthProvider";
+import { useContext } from "react";
+import { Toaster, toast } from "sonner";
 
 const ProductDetails = () => {
   const details = useLoaderData();
+  const { user } = useContext(AuthContext);
 
-  console.log(details);
+  const productInfo = {
+    user_id: user.uid,
+    product_name: details.product_name,
+    product_image: details.product_image,
+    product_brand: details.product_brand,
+    product_type: details.product_type,
+    product_price: details.product_price,
+    product_rating: details.product_rating,
+    product_description: details.product_description,
+  };
+
+  const handleAddToCart = () => {
+    fetch("http://localhost:5000/carts", {
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(productInfo),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+        if (data.insertedId) {
+          toast.success("Item added to cart successfully");
+        }
+      });
+  };
+
   return (
     <>
+      <Toaster position="bottom-right" richColors />
       <h1>DETAILS</h1>
       <div className="container px-2 mx-auto my-8 p-8">
         <div className="w-full h-fit bg-white border border-gray-200 shadow dark:bg-gray-800 dark:border-gray-700 p-4">
@@ -43,7 +75,10 @@ const ProductDetails = () => {
                 <h1 className="text-3xl font-bold text-gray-900 dark:text-white">
                   {details.product_price}৳
                 </h1>
-                <button className="btn bg-primaryLight text-white hover:bg-primaryLight">
+                <button
+                  onClick={handleAddToCart}
+                  className="btn bg-primaryLight text-white hover:bg-primaryLight"
+                >
                   Add to cart
                 </button>
               </div>
