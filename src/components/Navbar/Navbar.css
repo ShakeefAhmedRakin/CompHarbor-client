@@ -1,12 +1,12 @@
 .navigation-link .active {
-  border: 1px solid black;
+  border: 1px solid white;
   padding-bottom: 1px;
   transition: 0.1s;
   padding: 5px;
 }
 
 .navigation-link {
-  color: black;
+  color: white;
   background-color: none;
   padding: 5px;
 }

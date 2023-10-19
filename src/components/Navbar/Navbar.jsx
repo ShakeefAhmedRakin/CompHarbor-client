@@ -32,8 +32,8 @@ const Navbar = () => {
 
   const logo = (
     <>
-      <a className="btn bg-transparent hover:bg-transparent hover:border-black hover:scale-[1.02] normal-case text-2xl border-[1px] border-black rounded-none">
-        <h1 className="font-medium text-text tracking-widest flex items-center gap-x-1">
+      <a className="btn bg-transparent hover:bg-transparent hover:border-white hover:scale-[1.02] normal-case text-2xl border-[1px] border-white rounded-none">
+        <h1 className="font-normal text-white tracking-widest flex items-center gap-x-1">
           <PiComputerTowerBold></PiComputerTowerBold>Comp Harbor
         </h1>
       </a>
@@ -42,7 +42,7 @@ const Navbar = () => {
 
   return (
     <>
-      <div className="navbar bg-secondary">
+      <div className="navbar bg-primaryLight dark:bg-[#1c232b]">
         <div className="navbar-start">
           <div className="dropdown">
             <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -51,7 +51,7 @@ const Navbar = () => {
                 className="h-5 w-5"
                 fill="none"
                 viewBox="0 0 24 24"
-                stroke="black"
+                stroke="white"
               >
                 <path
                   strokeLinecap="round"
@@ -63,17 +63,17 @@ const Navbar = () => {
             </label>
             <ul
               tabIndex={0}
-              className="text-lg space-y-4 dropdown-content mt-1 -ml-2 z-[1] p-4 shadow bg-secondary rounded-none w-screen"
+              className="text-lg space-y-4 dropdown-content mt-1 -ml-2 z-[1] p-4 shadow bg-primaryLight rounded-none w-screen"
             >
               {user ? (
                 <>
                   <div className="flex justify-center">
-                    <div className="flex md:hidden justify-center items-center gap-2 bg-transparent border-[1px] border-black py-[2.55px] pl-[3.5px] pr-2">
+                    <div className="flex md:hidden justify-center items-center gap-2 bg-transparent border-[1px] border-white py-[2.55px] pl-[3.5px] pr-2">
                       <img
                         src={user?.photoURL}
                         className="w-10 h-10 rounded-full"
                       />
-                      <p className="text-black">{user?.displayName}</p>
+                      <p className="text-white">{user?.displayName}</p>
                     </div>
                   </div>
                 </>
@@ -94,19 +94,19 @@ const Navbar = () => {
             <>
               {user.displayName ? (
                 <>
-                  <div className="hidden md:flex justify-center items-center gap-2 mr-2 bg-transparent border-[1px] border-black py-[2.55px] pl-[3.5px] pr-2">
+                  <div className="hidden md:flex justify-center items-center gap-2 mr-2 bg-transparent border-[1px] border-white py-[2.55px] pl-[3.5px] pr-2">
                     <img
                       src={user?.photoURL}
                       className="w-10 h-10 rounded-full"
                     />
-                    <p className="text-black">{user?.displayName}</p>
+                    <p className="text-white">{user?.displayName}</p>
                   </div>
                 </>
               ) : (
                 ""
               )}
               <a
-                className="btn hover:scale-[1.02] bg-transparent hover:bg-transparent hover:border-black border-black border-[1px] text-black rounded-none"
+                className="btn hover:scale-[1.02] bg-transparent hover:bg-transparent hover:border-white border-white border-[1px] text-white rounded-none"
                 onClick={handleLogOut}
               >
                 Log out
@@ -115,7 +115,7 @@ const Navbar = () => {
           ) : (
             <Link
               to="/login"
-              className="btn hover:scale-[1.02] bg-transparent hover:bg-transparent hover:border-black border-black border-[1px] text-black rounded-none"
+              className="btn hover:scale-[1.02] bg-transparent hover:bg-transparent hover:border-white border-white border-[1px] text-white rounded-none"
             >
               Login
             </Link>
