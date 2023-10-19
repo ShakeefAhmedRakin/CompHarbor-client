@@ -3,6 +3,7 @@ import { useEffect } from "react";
 import { AuthContext } from "../../providers/AuthProvider";
 import { Toaster, toast } from "sonner";
 import CartCard from "../CartCard/CartCard";
+import { BsFillCartXFill } from "react-icons/bs";
 
 const Cart = () => {
   const { user } = useContext(AuthContext);
@@ -35,23 +36,38 @@ const Cart = () => {
         }
       });
   };
-
+  console.log(products);
   return (
     <>
       <Toaster position="bottom-right" richColors />
-      <h1>PRODUCTS</h1>
-      <div className="container px-2 mx-auto my-8 p-8">
-        <div className="flex justify-center">
-          <div className="w-full lg:w-fit grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-            {products.map((product) => (
-              <CartCard
-                key={product._id}
-                product={product}
-                handleDelete={handleDelete}
-              ></CartCard>
-            ))}
+      <div className="container mx-auto px-4 py-20">
+        <h1 className="text-center font-bold text-4xl text-gray-900 dark:text-white">
+          Your Cart
+        </h1>
+        <hr className="my-5" />
+        <div className="container px-2 mx-auto my-8">
+          <div className="flex justify-center">
+            {products.length > 0 ? (
+              <div className="w-full lg:w-fit grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+                {products.map((product) => (
+                  <CartCard
+                    key={product._id}
+                    product={product}
+                    handleDelete={handleDelete}
+                  ></CartCard>
+                ))}
+              </div>
+            ) : (
+              <div className="py-36 flex flex-col items-center">
+                <h1 className="text-center font-bold text-3xl text-gray-900 dark:text-white">
+                  No items added yet!
+                </h1>
+                <BsFillCartXFill className="text-6xl mt-4 text-gray-900 dark:text-white"></BsFillCartXFill>
+              </div>
+            )}
           </div>
         </div>
+        <hr className="my-5" />
       </div>
     </>
   );
