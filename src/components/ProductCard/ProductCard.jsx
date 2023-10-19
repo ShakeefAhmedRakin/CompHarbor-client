@@ -2,6 +2,7 @@ import PropTypes from "prop-types";
 import { Rating } from "@smastrom/react-rating";
 
 import "@smastrom/react-rating/style.css";
+import { Link } from "react-router-dom";
 
 const ProductCard = ({ product }) => {
   return (
@@ -36,12 +37,17 @@ const ProductCard = ({ product }) => {
             {product.product_price}৳
           </h1>
           <div className="flex justify-between mt-4">
-            <button className="btn bg-primaryLight text-white hover:bg-primaryLight">
-              Update
-            </button>
-            <button className="btn bg-primaryLight text-white hover:bg-primaryLight">
-              Details
-            </button>
+            <Link to={`/update/${product._id}`}>
+              <button className="btn bg-primaryLight text-white hover:bg-primaryLight">
+                Update
+              </button>
+            </Link>
+
+            <Link to={`/product/${product._id}`}>
+              <button className="btn bg-primaryLight text-white hover:bg-primaryLight">
+                Details
+              </button>
+            </Link>
           </div>
         </div>
       </div>
