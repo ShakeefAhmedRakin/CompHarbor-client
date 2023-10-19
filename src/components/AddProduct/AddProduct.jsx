@@ -45,7 +45,7 @@ const AddProduct = () => {
       body: JSON.stringify(newProduct),
     })
       .then((res) => res.json())
-      .them((data) => console.log(data));
+      .then((data) => console.log(data));
   };
 
   return (
@@ -150,12 +150,13 @@ const AddProduct = () => {
                 <label className="block mb-2 text-sm font-medium text-black dark:text-white">
                   Short description
                 </label>
-                <input
+                <textarea
                   type="text"
                   name="description"
                   className="bg-gray-50 dark:bg-gray-900 border border-gray-300 dark:border-gray-900 text-gray-900 text-sm rounded-lg block w-full p-2.5 dark:text-white"
                   placeholder="Short description"
                   required
+                  rows={10}
                 />
               </div>
 
