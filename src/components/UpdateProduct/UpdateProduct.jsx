@@ -1,12 +1,12 @@
 import { useEffect, useState } from "react";
 import { useLoaderData } from "react-router-dom";
 import { Toaster, toast } from "sonner";
+import { Rating } from "@smastrom/react-rating";
 
 const UpdateProduct = () => {
   const [brands, setBrands] = useState([]);
 
   const existingDetails = useLoaderData();
-
   const {
     _id,
     product_name,
@@ -18,13 +18,13 @@ const UpdateProduct = () => {
     product_description,
   } = existingDetails;
 
+  const [rating, setRating] = useState(parseInt(product_rating));
+
   useEffect(() => {
-    fetch("/brands.json")
+    fetch("http://localhost:5000/brands")
       .then((res) => res.json())
       .then((data) => setBrands(data));
   }, []);
-
-  console.log(brands);
 
   const handleUpdateProduct = (e) => {
     e.preventDefault();
@@ -35,7 +35,7 @@ const UpdateProduct = () => {
     const product_type = form.type.value;
     const product_price = form.price.value;
     const product_description = form.description.value;
-    const product_rating = form.rating.value;
+    const product_rating = rating;
 
     const updatedProduct = {
       product_name,
@@ -145,18 +145,18 @@ const UpdateProduct = () => {
                 />
               </div>
               <div className="grid grid-cols-2 gap-4">
-                <div className="mb-6">
-                  <label className="block mb-2 text-sm font-medium text-black dark:text-white">
+                <div className="mb-6 flex flex-col justify-between">
+                  <label className="block text-sm font-medium text-black dark:text-white">
                     Rating
                   </label>
-                  <input
-                    type="number"
-                    name="rating"
-                    className="bg-gray-50 dark:bg-gray-900 border border-gray-300 dark:border-gray-900 text-gray-900 text-sm rounded-lg block w-full p-2.5 dark:text-white"
-                    placeholder="Rating"
-                    required
-                    defaultValue={product_rating}
-                  />
+
+                  <div className="flex items-center h-full">
+                    <Rating
+                      style={{ maxWidth: 180, minWidth: 110 }}
+                      value={rating}
+                      onChange={setRating}
+                    />
+                  </div>
                 </div>
                 <div className="mb-6">
                   <label className="block mb-2 text-sm font-medium text-black dark:text-white">

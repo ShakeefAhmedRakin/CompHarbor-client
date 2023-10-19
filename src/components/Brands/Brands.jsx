@@ -5,7 +5,7 @@ const Brands = () => {
   const [brands, setBrands] = useState([]);
 
   useEffect(() => {
-    fetch("/brands.json")
+    fetch("http://localhost:5000/brands")
       .then((res) => res.json())
       .then((data) => setBrands(data));
   }, []);
