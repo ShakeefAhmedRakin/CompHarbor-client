@@ -2,13 +2,15 @@ import { useContext, useState } from "react";
 import { useEffect } from "react";
 import { AuthContext } from "../../providers/AuthProvider";
 import { Toaster, toast } from "sonner";
-import CartCard from "../CartCard/CardCard";
+import CartCard from "../CartCard/CartCard";
 
 const Cart = () => {
   const { user } = useContext(AuthContext);
   const userID = user?.uid;
 
   const [products, setProducts] = useState([]);
+
+  console.log(products);
 
   useEffect(() => {
     fetch(`http://localhost:5000/carts/${userID}`)
@@ -17,17 +19,19 @@ const Cart = () => {
   }, [userID]);
 
   const handleDelete = (idToBeDeleted) => {
+    console.log(idToBeDeleted);
     fetch(`http://localhost:5000/carts/${idToBeDeleted}`, {
       method: "DELETE",
     })
       .then((result) => result.json())
       .then((data) => {
+        console.log(data.deletedCount);
         if (data.deletedCount > 0) {
           toast.success("Item removed from cart");
-          const remaining = products.filter(
-            (user) => user._id !== idToBeDeleted
+          // Update the UI by removing the deleted item from the local state
+          setProducts((prevProducts) =>
+            prevProducts.filter((product) => product.cart_id !== idToBeDeleted)
           );
-          setProducts(remaining);
         }
       });
   };

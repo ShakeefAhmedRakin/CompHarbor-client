@@ -15,10 +15,14 @@ const ProductCard = ({ product }) => {
         />
 
         <div className="px-5 pb-5">
-          <span className="badge my-4 font-medium">
-            {product.product_brand}
-          </span>
-          <span className="badge my-4 font-medium">{product.product_type}</span>
+          <div className="flex gap-4">
+            <span className="badge my-4 font-bold">
+              {product.product_brand}
+            </span>
+            <span className="badge my-4 font-medium">
+              {product.product_type}
+            </span>
+          </div>
           <h5 className="text-xl font-semibold tracking-tight text-gray-900 dark:text-white">
             {product.product_name}
           </h5>

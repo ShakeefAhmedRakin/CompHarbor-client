@@ -4,8 +4,6 @@ import ProductCard from "../ProductCard/ProductCard";
 const Products = () => {
   const products = useLoaderData();
 
-  console.log(products);
-
   return (
     <>
       <h1>PRODUCTS</h1>

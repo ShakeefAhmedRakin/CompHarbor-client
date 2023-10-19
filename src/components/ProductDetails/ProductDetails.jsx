@@ -10,13 +10,7 @@ const ProductDetails = () => {
 
   const productInfo = {
     user_id: user.uid,
-    product_name: details.product_name,
-    product_image: details.product_image,
-    product_brand: details.product_brand,
-    product_type: details.product_type,
-    product_price: details.product_price,
-    product_rating: details.product_rating,
-    product_description: details.product_description,
+    product_id: details._id,
   };
 
   const handleAddToCart = () => {

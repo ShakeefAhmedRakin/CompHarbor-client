@@ -21,7 +21,7 @@ const Brands = () => {
         <div className="flex justify-center">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
             {brands.map((brand) => (
-              <BrandCard key={brand.id} brand={brand}></BrandCard>
+              <BrandCard key={brand._id} brand={brand}></BrandCard>
             ))}
           </div>
         </div>
