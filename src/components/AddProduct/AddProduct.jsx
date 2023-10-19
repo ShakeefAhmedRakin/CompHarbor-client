@@ -23,13 +23,29 @@ const AddProduct = () => {
     const product_description = form.description.value;
     const product_rating = form.rating.value;
 
-    console.log("Name:", product_name);
-    console.log("Image:", product_image);
-    console.log("Brand Name:", product_brand);
-    console.log("Type:", product_type);
-    console.log("Price:", product_price);
-    console.log("Short Description:", product_description);
-    console.log("Rating:", product_rating);
+    const newProduct = {
+      product_name,
+      product_image,
+      product_brand,
+      product_type,
+      product_price,
+      product_rating,
+      product_description,
+    };
+
+    console.log("--------------------------------");
+    console.log(newProduct);
+    console.log("--------------------------------");
+
+    fetch("http://localhost:5000/products", {
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(newProduct),
+    })
+      .then((res) => res.json())
+      .them((data) => console.log(data));
   };
 
   return (
