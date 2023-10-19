@@ -20,13 +20,19 @@ const Navbar = () => {
       <li className="navigation-link">
         <NavLink to="/">Home</NavLink>
       </li>
-      <li className="navigation-link">
-        <NavLink to="/add-product">Add Product</NavLink>
-      </li>
+
       <li className="navigation-link">
         <NavLink to="/my-cart">My Cart</NavLink>
       </li>
-      {user && <>{/* PRIVATE ROUTES */}</>}
+      {user && (
+        <>
+          {
+            <li className="navigation-link">
+              <NavLink to="/add-product">Add Product</NavLink>
+            </li>
+          }
+        </>
+      )}
     </>
   );
 
@@ -42,7 +48,7 @@ const Navbar = () => {
 
   return (
     <>
-      <div className="navbar bg-primaryLight dark:bg-[#1c232b]">
+      <div className="navbar bg-primaryLight dark:bg-gray-800">
         <div className="navbar-start">
           <div className="dropdown">
             <label tabIndex={0} className="btn btn-ghost lg:hidden">

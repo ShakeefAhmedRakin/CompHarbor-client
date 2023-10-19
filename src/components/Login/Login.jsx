@@ -34,30 +34,32 @@ const Login = () => {
       <Toaster position="bottom-right" richColors />
       <div className="container mx-auto px-4 py-20">
         <div className="max-w-lg mx-auto">
-          <div className="border-[1px] border-black p-8">
-            <form onSubmit={handleLogin}>
-              <h1 className="text-center font-bold text-4xl">Login</h1>
+          <div className="border-[1px] border-black p-8 bg-white dark:bg-gray-800">
+            <form onSubmit={handleLogin} className="text-black dark:text-white">
+              <h1 className="text-center font-bold text-4xl text-black dark:text-white">
+                Login
+              </h1>
               <hr className="my-5" />
               <div className="mb-6">
-                <label className="block mb-2 text-sm font-medium text-gray-900">
+                <label className="block mb-2 text-sm font-medium text-black dark:text-white">
                   Your email
                 </label>
                 <input
                   type="email"
                   name="email"
-                  className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-purple-500 focus:border-purple-500 block w-full p-2.5 "
+                  className="bg-gray-50 dark:bg-gray-900 border border-gray-300 dark:border-gray-900 text-gray-900 text-sm rounded-lg block w-full p-2.5 dark:text-white"
                   placeholder="Your email"
                   required
                 ></input>
               </div>
               <div className="mb-6">
-                <label className="block mb-2 text-sm font-medium text-gray-900">
+                <label className="block mb-2 text-sm font-medium text-black dark:text-white">
                   Your password
                 </label>
                 <input
                   type="password"
                   name="password"
-                  className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-purple-500 focus:border-purple-500 block w-full p-2.5"
+                  className="bg-gray-50 dark:bg-gray-900 border border-gray-300 dark:border-gray-900 text-gray-900 text-sm rounded-lg block w-full p-2.5 dark:text-white"
                   required
                   placeholder="Your password"
                 ></input>
@@ -66,7 +68,7 @@ const Login = () => {
               <div className="flex justify-center">
                 <button
                   type="submit"
-                  className="btn bg-secondary hover:bg-secondary font-medium"
+                  className="btn bg-primaryLight text-white hover:bg-primaryLight font-medium"
                 >
                   Login
                 </button>
@@ -79,10 +81,12 @@ const Login = () => {
               </p>
             </form>
             <hr className="my-5" />
-            <h1 className="text-center mb-5">Or Login With</h1>
-            <div className="flex justify-center">
+            <h1 className="text-center mb-5 text-black dark:text-white">
+              Or Login With
+            </h1>
+            <div className="flex justify-center text-black dark:text-white">
               <button
-                className="btn btn-circle bg-secondary hover:bg-secondary"
+                className="btn btn-circle bg-primaryLight text-white hover:bg-primaryLight"
                 onClick={handleGoogleSignIn}
               >
                 <RiGoogleLine className="text-xl"></RiGoogleLine>
