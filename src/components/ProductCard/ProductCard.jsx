@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 const ProductCard = ({ product }) => {
   return (
     <>
-      <div className="flex flex-col justify-between w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+      <div className="flex flex-col justify-between w-full max-w-lg bg-gray-50 border-[1.5px] border-black dark:border-white shadow dark:bg-gray-800">
         <img
           className="p-8 rounded-t-lg w-full h-[200px] lg:h-[320px] object-contain"
           src={product.product_image}

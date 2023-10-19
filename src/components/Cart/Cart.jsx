@@ -41,7 +41,7 @@ const Cart = () => {
     <>
       <Toaster position="bottom-right" richColors />
       <div className="container mx-auto px-4 py-20 ">
-        <div className="border-[1px] bg-white dark:bg-gray-900 border-black dark:border-white">
+        <div className="border-[1px] bg-white dark:bg-gray-800 border-black dark:border-white">
           <h1 className="text-center my-10 font-bold text-4xl text-gray-900 dark:text-white">
             Your Cart
           </h1>
