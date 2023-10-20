@@ -67,13 +67,15 @@ const UpdateProduct = () => {
     <>
       <Toaster position="bottom-right" richColors />
       <div className="container mx-auto px-4 py-20">
-        <div className="max-w-lg mx-auto">
-          <div className="border-[1px] border-black p-8 bg-white dark:bg-gray-800">
+        <div className="max-w-6xl mx-auto">
+          <div className="border-[1px] border-black px-8 py-4 bg-white dark:bg-gray-800">
             <form
               onSubmit={handleUpdateProduct}
               className="text-black dark:text-white"
             >
-              <h1 className="text-center font-bold text-4xl">Update Product</h1>
+              <h1 className="bg-primaryLight dark:bg-primaryDark py-5 text-center my-5 font-bold text-2xl md:text-4xl text-white">
+                Update Product
+              </h1>
               <hr className="my-5" />
 
               <div className="mb-6">
@@ -90,73 +92,47 @@ const UpdateProduct = () => {
                 />
               </div>
 
-              <div className="mb-6">
-                <label className="block mb-2 text-sm font-medium text-black dark:text-white">
-                  Choose Brand
-                </label>
-                <select
-                  id="brand"
-                  name="brand"
-                  defaultValue={product_brand}
-                  className="bg-gray-50 dark:bg-gray-900 border border-gray-300 dark:border-gray-900 text-gray-900 text-sm rounded-lg block w-full p-2.5 dark:text-white"
-                >
-                  {brands.map((brand) => {
-                    if (brand.name === product_brand) {
-                      return (
-                        <option key={brand.id} value={brand.name} selected>
-                          {brand.name}
-                        </option>
-                      );
-                    } else {
-                      return (
-                        <option key={brand.id} value={brand.name}>
-                          {brand.name}
-                        </option>
-                      );
-                    }
-                  })}
-                </select>
-              </div>
-
-              <div className="mb-6">
-                <label className="block mb-2 text-sm font-medium text-black dark:text-white">
-                  Type
-                </label>
-                <input
-                  type="text"
-                  name="type"
-                  className="bg-gray-50 dark:bg-gray-900 border border-gray-300 dark:border-gray-900 text-gray-900 text-sm rounded-lg block w-full p-2.5 dark:text-white"
-                  placeholder="Type"
-                  required
-                  defaultValue={product_type}
-                />
-              </div>
-              <div className="mb-6">
-                <label className="block mb-2 text-sm font-medium text-black dark:text-white">
-                  Image Link
-                </label>
-                <input
-                  type="text"
-                  name="image"
-                  className="bg-gray-50 dark:bg-gray-900 border border-gray-300 dark:border-gray-900 text-gray-900 text-sm rounded-lg block w-full p-2.5 dark:text-white"
-                  placeholder="Image Link"
-                  required
-                  defaultValue={product_image}
-                />
-              </div>
-              <div className="grid grid-cols-2 gap-4">
-                <div className="mb-6 flex flex-col justify-between">
-                  <label className="block text-sm font-medium text-black dark:text-white">
-                    Rating
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-x-4">
+                <div className="mb-6">
+                  <label className="block mb-2 text-sm font-medium text-black dark:text-white">
+                    Choose Brand
                   </label>
+                  <select
+                    id="brand"
+                    name="brand"
+                    defaultValue={product_brand}
+                    className="bg-gray-50 dark:bg-gray-900 border border-gray-300 dark:border-gray-900 text-gray-900 text-sm rounded-lg block w-full p-2.5 dark:text-white"
+                  >
+                    {brands.map((brand) => {
+                      if (brand.name === product_brand) {
+                        return (
+                          <option key={brand.id} value={brand.name} selected>
+                            {brand.name}
+                          </option>
+                        );
+                      } else {
+                        return (
+                          <option key={brand.id} value={brand.name}>
+                            {brand.name}
+                          </option>
+                        );
+                      }
+                    })}
+                  </select>
+                </div>
 
-                  <div className="flex items-center h-full">
-                    <Rating
-                      style={{ maxWidth: 180, minWidth: 110 }}
-                      value={rating}
-                      onChange={setRating}
-                    />
-                  </div>
+                <div className="mb-6">
+                  <label className="block mb-2 text-sm font-medium text-black dark:text-white">
+                    Type
+                  </label>
+                  <input
+                    type="text"
+                    name="type"
+                    className="bg-gray-50 dark:bg-gray-900 border border-gray-300 dark:border-gray-900 text-gray-900 text-sm rounded-lg block w-full p-2.5 dark:text-white"
+                    placeholder="Type"
+                    required
+                    defaultValue={product_type}
+                  />
                 </div>
                 <div className="mb-6">
                   <label className="block mb-2 text-sm font-medium text-black dark:text-white">
@@ -169,6 +145,37 @@ const UpdateProduct = () => {
                     placeholder="Price"
                     required
                     defaultValue={product_price}
+                  />
+                </div>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-x-4">
+                <div className="grid grid-cols-2 gap-4">
+                  <div className="mb-6 flex flex-col justify-between">
+                    <label className="block text-sm font-medium text-black dark:text-white">
+                      Rating
+                    </label>
+
+                    <div className="flex items-center h-full">
+                      <Rating
+                        style={{ maxWidth: 180, minWidth: 110 }}
+                        value={rating}
+                        onChange={setRating}
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div className="mb-6 col-span-2">
+                  <label className="block mb-2 text-sm font-medium text-black dark:text-white">
+                    Image Link
+                  </label>
+                  <input
+                    type="text"
+                    name="image"
+                    className="bg-gray-50 dark:bg-gray-900 border border-gray-300 dark:border-gray-900 text-gray-900 text-sm rounded-lg block w-full p-2.5 dark:text-white"
+                    placeholder="Image Link"
+                    required
+                    defaultValue={product_image}
                   />
                 </div>
               </div>
@@ -191,7 +198,7 @@ const UpdateProduct = () => {
               <div className="flex justify-center">
                 <button
                   type="submit"
-                  className="btn bg-primaryLight hover:bg-primaryLight font-medium text-white"
+                  className="btn bg-primaryLight hover:bg-primaryLight dark:bg-primaryDark dark:hover:bg-primaryDark font-medium text-white"
                 >
                   Update Product
                 </button>
