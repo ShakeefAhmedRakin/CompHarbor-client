@@ -14,16 +14,16 @@ const ProductCard = ({ product }) => {
           alt="product image"
         />
 
-        <div className="px-5 pb-5">
+        <div className="flex flex-col h-full justify-between px-5 pb-5">
           <div className="flex gap-1">
-            <span className="badge my-4 font-bold">
+            <span className="badge my-4 font-bold badge-sm md:badge-md">
               {product.product_brand}
             </span>
-            <span className="badge my-4 font-medium">
+            <span className="badge my-4 font-medium badge-sm md:badge-md">
               {product.product_type}
             </span>
           </div>
-          <h5 className="text-xl font-semibold tracking-tight text-gray-900 dark:text-white">
+          <h5 className="text-base md:text-lg xl:text-xl font-semibold tracking-tight text-gray-900 dark:text-white">
             {product.product_name}
           </h5>
           <div className="my-2 flex justify-between">
@@ -37,18 +37,18 @@ const ProductCard = ({ product }) => {
             </span>
           </div>
 
-          <h1 className="text-3xl font-bold text-gray-900 dark:text-white">
+          <h1 className="text-xl md:text-3xl font-bold text-gray-900 dark:text-white">
             {product.product_price}৳
           </h1>
           <div className="flex justify-between mt-4">
             <Link to={`/update/${product._id}`}>
-              <button className="btn border-none bg-primaryLight dark:bg-primaryDark hover:dark:bg-primaryDark text-white hover:bg-primaryLight">
+              <button className="btn btn-sm text-sm md:btn-md border-none bg-primaryLight dark:bg-primaryDark hover:dark:bg-primaryDark text-white hover:bg-primaryLight">
                 Update
               </button>
             </Link>
 
             <Link to={`/product/${product._id}`}>
-              <button className="btn border-none bg-primaryLight dark:bg-primaryDark hover:dark:bg-primaryDark text-white hover:bg-primaryLight">
+              <button className="btn btn-sm text-sm md:btn-md border-none bg-primaryLight dark:bg-primaryDark hover:dark:bg-primaryDark text-white hover:bg-primaryLight">
                 Details
               </button>
             </Link>

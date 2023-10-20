@@ -68,14 +68,14 @@ const Products = () => {
             </Swiper>
           </div>
           <hr className="mb-5" />
-          <h1 className="bg-primaryLight dark:bg-primaryDark py-5 text-center my-5 mx-4 font-bold text-4xl text-white">
+          <h1 className="bg-primaryLight dark:bg-primaryDark py-5 text-center my-5 mx-4 font-bold text-xl md:text-4xl text-white">
             {title}
           </h1>
-          <hr className="my-5" />
-          <div className="container px-2 mx-auto my-8 p-8">
+          <hr className="my-0" />
+          <div className="container px-2 mx-auto p-8">
             <div className="flex justify-center">
               {products.length > 0 ? (
-                <div className="w-full lg:w-fit grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
+                <div className="w-full px-1 xl:px-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
                   {products.map((product) => (
                     <ProductCard
                       key={product._id}

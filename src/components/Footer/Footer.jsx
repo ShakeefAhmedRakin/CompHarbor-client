@@ -12,13 +12,13 @@ const Footer = () => {
         </div>
         <nav className="grid grid-flow-col gap-4 border-white border-[1px] p-5">
           <Link to="/">
-            <a className="link link-hover">Home</a>
+            <span className="link link-hover">Home</span>
           </Link>
           <Link to="/login">
-            <a className="link link-hover">Login</a>
+            <span className="link link-hover">Login</span>
           </Link>
           <Link to="/register">
-            <a className="link link-hover">Sign Up</a>
+            <span className="link link-hover">Sign Up</span>
           </Link>
         </nav>
         <aside>
