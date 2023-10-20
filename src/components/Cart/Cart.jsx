@@ -1,7 +1,7 @@
 import { useContext, useState } from "react";
 import { useEffect } from "react";
 import { AuthContext } from "../../providers/AuthProvider";
-import { Toaster, toast } from "sonner";
+import { toast } from "sonner";
 import CartCard from "../CartCard/CartCard";
 import { BsFillCartXFill } from "react-icons/bs";
 
@@ -40,7 +40,6 @@ const Cart = () => {
   };
   return (
     <>
-      <Toaster position="bottom-right" richColors />
       <div data-aos="fade-up" className="container mx-auto px-4 py-20 ">
         <div className="border-[1px] bg-white dark:bg-gray-900 border-black dark:border-white">
           <h1 className="bg-primaryLight dark:bg-primaryDark py-5 text-center my-5 mx-4 font-bold text-xl md:text-4xl text-white">

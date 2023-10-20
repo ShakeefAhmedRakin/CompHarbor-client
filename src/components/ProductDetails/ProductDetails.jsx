@@ -2,7 +2,7 @@ import { useLoaderData } from "react-router-dom";
 import { Rating } from "@smastrom/react-rating";
 import { AuthContext } from "../../providers/AuthProvider";
 import { useContext } from "react";
-import { Toaster, toast } from "sonner";
+import { toast } from "sonner";
 
 const ProductDetails = () => {
   const details = useLoaderData();
@@ -55,8 +55,6 @@ const ProductDetails = () => {
         </>
       ) : (
         <div>
-          <Toaster position="bottom-right" richColors />
-
           <div data-aos="fade-up" className="container px-2 mx-auto my-8 p-8">
             <div className="w-full h-fit bg-white border border-gray-200 shadow dark:bg-gray-800 dark:border-gray-700 p-4">
               <h1 className="bg-primaryLight dark:bg-primaryDark py-5 text-center my-5 font-bold text-xl md:text-4xl text-white">

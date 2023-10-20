@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../providers/AuthProvider";
-import { Toaster, toast } from "sonner";
+import { toast } from "sonner";
 
 const Register = () => {
   const { createUser, addUsernamePhoto, signInUser, logOut } =
@@ -59,7 +59,6 @@ const Register = () => {
   };
   return (
     <>
-      <Toaster position="bottom-right" richColors />
       <div data-aos="flip-right" className="container mx-auto px-4 py-20">
         <div className="max-w-lg mx-auto">
           <div className="border-[1px] border-black p-8 bg-white dark:bg-gray-800">

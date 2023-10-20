@@ -5,7 +5,7 @@ import { PiComputerTowerBold } from "react-icons/pi";
 import "./Navbar.css";
 import { BsNintendoSwitch } from "react-icons/bs";
 import PropTypes from "prop-types";
-import { Toaster, toast } from "sonner";
+import { toast } from "sonner";
 
 const Navbar = ({ toggleTheme }) => {
   const { user, logOut } = useContext(AuthContext);
@@ -49,7 +49,6 @@ const Navbar = ({ toggleTheme }) => {
 
   return (
     <>
-      <Toaster position="bottom-right" richColors />
       <div className="navbar bg-primaryLight dark:bg-primaryDark">
         <div className="navbar-start">
           <div className="dropdown">

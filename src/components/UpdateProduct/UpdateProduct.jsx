@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useLoaderData, useNavigate } from "react-router-dom";
-import { Toaster, toast } from "sonner";
+import { toast } from "sonner";
 import { Rating } from "@smastrom/react-rating";
 
 const UpdateProduct = () => {
@@ -71,7 +71,6 @@ const UpdateProduct = () => {
 
   return (
     <>
-      <Toaster position="bottom-right" richColors />
       <div data-aos="fade-up" className="container mx-auto px-4 py-20">
         <div className="max-w-6xl mx-auto">
           <div className="border-[1px] border-black px-8 py-4 bg-white dark:bg-gray-800">

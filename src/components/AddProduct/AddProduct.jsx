@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Toaster, toast } from "sonner";
+import { toast } from "sonner";
 import { Rating } from "@smastrom/react-rating";
 import { useNavigate } from "react-router-dom";
 
@@ -45,7 +45,9 @@ const AddProduct = () => {
       .then((res) => res.json())
       .then((data) => {
         if (data.insertedId) {
-          toast.success("Product has been added successfully. Redirecting...");
+          toast.success(
+            `Product has been added successfully. Redirecting to ${product_brand}`
+          );
           setTimeout(() => {
             navigate(`/products/${product_brand}`);
           }, 2000);
@@ -55,7 +57,6 @@ const AddProduct = () => {
 
   return (
     <>
-      <Toaster position="bottom-right" richColors />
       <div data-aos="fade-up" className="container mx-auto px-4 py-20">
         <div className="max-w-6xl mx-auto">
           <div className="border-[1px] border-black px-8 py-4 bg-white dark:bg-gray-800">
