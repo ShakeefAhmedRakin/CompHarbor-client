@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 const BrandCard = ({ brand }) => {
   return (
     <>
-      <Link to={`/${brand.name}`}>
+      <Link to={`/products/${brand.name}`}>
         <div className="max-w-[250px] h-full bg-gray-100 shadow-xl transform hover:scale-102 transition-transform cursor-pointer duration-300 hover:-translate-y-[3px]">
           <div className="relative flex items-center group">
             <img

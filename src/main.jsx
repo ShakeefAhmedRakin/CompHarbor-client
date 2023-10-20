@@ -13,12 +13,13 @@ import PrivateRoute from "./routes/PrivateRoute";
 import Products from "./components/Products/Products";
 import ProductDetails from "./components/ProductDetails/ProductDetails";
 import UpdateProduct from "./components/UpdateProduct/UpdateProduct";
+import Error from "./components/Error/Error";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Root></Root>,
-    // errorElement: <Error></Error>,
+    errorElement: <Error></Error>,
     children: [
       {
         path: "/",
@@ -33,7 +34,7 @@ const router = createBrowserRouter([
         ),
       },
       {
-        path: "/:brand",
+        path: "/products/:brand",
         element: <Products></Products>,
         loader: ({ params }) =>
           fetch(`http://localhost:5000/products/${params.brand}`),
