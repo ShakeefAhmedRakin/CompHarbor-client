@@ -59,15 +59,17 @@ const ProductDetails = () => {
 
           <div data-aos="fade-up" className="container px-2 mx-auto my-8 p-8">
             <div className="w-full h-fit bg-white border border-gray-200 shadow dark:bg-gray-800 dark:border-gray-700 p-4">
-              <h1 className="bg-primaryLight dark:bg-primaryDark py-5 text-center my-5 font-bold text-4xl text-white">
+              <h1 className="bg-primaryLight dark:bg-primaryDark py-5 text-center my-5 font-bold text-xl md:text-4xl text-white">
                 Product Details
               </h1>
               <div className="flex flex-col lg:flex-row w-full h-full bg-gray-100 dark:bg-gray-900 ">
-                <img
-                  className="w-full object-contain max-w-lg h-96 p-8"
-                  src={details.product_image}
-                  alt="product image"
-                />
+                <div className="">
+                  <img
+                    className="w-full aspect-square object-contain h-48 md:h-96"
+                    src={details.product_image}
+                    alt="product image"
+                  />
+                </div>
                 <div className="flex flex-col items-left justify-between w-full p-2 md:p-8 gap-x-2">
                   <div className="space-y-2">
                     <h5 className="text-xl md:text-3xl font-semibold tracking-tight text-gray-900 dark:text-white">
@@ -87,17 +89,17 @@ const ProductDetails = () => {
                       value={parseInt(details.product_rating)}
                       readOnly
                     />
-                    <p className="mt-5 text-base text-gray-900 dark:text-white">
+                    <p className="mt-5 text-sm md:text-base text-gray-900 dark:text-white">
                       {details.product_description}
                     </p>
                   </div>
-                  <div className="flex justify-between mt-8">
-                    <h1 className="text-3xl font-bold text-gray-900 dark:text-white">
+                  <div className="flex justify-between place-items-center mt-8">
+                    <h1 className="text-xl md:text-3xl font-bold text-gray-900 dark:text-white">
                       {details.product_price}৳
                     </h1>
                     <button
                       onClick={handleAddToCart}
-                      className="btn bg-primaryLight dark:bg-primaryDark dark:hover:bg-primaryDark text-white hover:bg-primaryLight"
+                      className="btn btn-sm md:btn-md bg-primaryLight dark:bg-primaryDark dark:hover:bg-primaryDark text-white hover:bg-primaryLight"
                     >
                       Add to cart
                     </button>

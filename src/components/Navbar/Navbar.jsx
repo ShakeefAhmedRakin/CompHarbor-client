@@ -71,7 +71,7 @@ const Navbar = ({ toggleTheme }) => {
             </label>
             <ul
               tabIndex={0}
-              className="text-lg space-y-4 dropdown-content mt-3 border-white border-[1px] -ml-2 z-50 p-4 shadow bg-primaryLight dark:bg-primaryDark rounded-none w-screen"
+              className="text-lg space-y-4 dropdown-content mt-1 border-white border-b-[1px] -ml-2 z-50 p-4 shadow bg-primaryLight dark:bg-primaryDark rounded-none w-screen"
             >
               {user ? (
                 <>
