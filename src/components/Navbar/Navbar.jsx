@@ -46,7 +46,7 @@ const Navbar = () => {
 
   return (
     <>
-      <div className="navbar bg-primaryLight dark:bg-gray-800">
+      <div className="navbar bg-primaryLight dark:bg-primaryDark">
         <div className="navbar-start">
           <div className="dropdown">
             <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -67,7 +67,7 @@ const Navbar = () => {
             </label>
             <ul
               tabIndex={0}
-              className="text-lg space-y-4 dropdown-content mt-1 -ml-2 z-[1] p-4 shadow bg-primaryLight rounded-none w-screen"
+              className="text-lg space-y-4 dropdown-content mt-1 -ml-2 z-[2] p-4 shadow bg-primaryLight rounded-none w-screen"
             >
               {user ? (
                 <>

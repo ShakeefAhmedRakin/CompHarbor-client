@@ -7,6 +7,7 @@ export default {
         textLight: "black",
         background: "#eae6f4",
         primaryLight: "#38529E",
+        primaryDark: "#061132",
         secondary: "#cbc2e5",
         accent: "#58429a",
       },
