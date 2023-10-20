@@ -15,11 +15,11 @@ const Faq = () => {
               <div className="flex flex-col w-full gap-4 text-black dark:text-white flex-1">
                 <div data-aos="flip-left" className="flex flex-col gap-y-4">
                   <hr />
-                  <h1 className="text-2xl font-bold text-left flex items-center gap-x-3">
+                  <h1 className="text-lg md:text-2xl font-bold text-left flex items-center gap-x-3">
                     <MdOutlineQuestionAnswer></MdOutlineQuestionAnswer>What
                     payment methods do you accept?
                   </h1>
-                  <p className="text-lg text-left max-w-4xl">
+                  <p className="text-base md:text-lg text-left max-w-4xl">
                     We accept a wide range of payment methods, including major
                     credit cards (Visa, MasterCard, American Express), PayPal,
                     and more. You can choose your preferred payment option
@@ -29,11 +29,11 @@ const Faq = () => {
                 </div>
                 <div data-aos="flip-left" className="flex flex-col gap-y-4">
                   <hr />
-                  <h1 className="text-2xl font-bold text-left flex items-center gap-x-3">
+                  <h1 className="text-lg md:text-2xl font-bold text-left flex items-center gap-x-3">
                     <MdOutlineQuestionAnswer></MdOutlineQuestionAnswer>What is
                     your return policy?
                   </h1>
-                  <p className="text-lg text-left max-w-4xl">
+                  <p className="text-base md:text-lg text-left max-w-4xl">
                     {`We offer a hassle-free return policy. If you're not
                     satisfied with your purchase, you can return it within 30
                     days for a full refund or exchange. Please check our
@@ -44,22 +44,22 @@ const Faq = () => {
                 </div>
                 <div data-aos="flip-left" className="flex flex-col gap-y-4">
                   <hr />
-                  <h1 className="text-2xl font-bold text-left flex items-center gap-x-3">
+                  <h1 className="text-lg md:text-2xl font-bold text-left flex items-center gap-x-3">
                     <MdOutlineQuestionAnswer></MdOutlineQuestionAnswer>How can I
                     track my order?
                   </h1>
-                  <p className="text-lg text-left max-w-4xl">
+                  <p className="text-base md:text-lg text-left max-w-4xl">
                     {`Tracking your order is easy. Once your order is processed and shipped, you will receive a confirmation email with a tracking number. You can use this number to track your shipment on our website or through the carrier's website.`}
                   </p>
                   <hr />
                 </div>
                 <div data-aos="flip-left" className="flex flex-col gap-y-4">
                   <hr />
-                  <h1 className="text-2xl font-bold text-left flex items-center gap-x-3">
+                  <h1 className="text-lg md:text-2xl font-bold text-left flex items-center gap-x-3">
                     <MdOutlineQuestionAnswer></MdOutlineQuestionAnswer>How can I
                     contact your customer support team?
                   </h1>
-                  <p className="text-lg text-left max-w-4xl">
+                  <p className="text-base md:text-lg text-left max-w-4xl">
                     {`Our customer support team is here to assist you. You can contact us via phone at 00-11-22-33 during our operating hours, or you can use the contact form on our website to send us an email. We typically respond within 24 hours.`}
                   </p>
                   <hr />

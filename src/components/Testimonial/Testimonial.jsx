@@ -4,10 +4,12 @@ const Testimonial = () => {
       <div className="px-2">
         <div className="container mx-auto my-8 bg-primaryLight dark:bg-primaryDark border-black border-[1px] pt-12 pb-8">
           <div className="space-y-4 mb-4">
-            <h1 className="text-4xl md:text-6xl text-white font-bold text-center">
+            <h1 className="text-2xl md:text-6xl text-white font-bold text-center">
               200K+ Customers
             </h1>
-            <p className="text-white text-center text-lg">and counting...</p>
+            <p className="text-white text-center text-base md:text-lg">
+              and counting...
+            </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 p-2 lg:px-12">
             <div
@@ -15,7 +17,7 @@ const Testimonial = () => {
               className="bg-white dark:bg-gray-900 p-5 border-[1px] border-black text-black dark:text-white"
             >
               <svg
-                className="h-12 mx-auto mb-2 text-gray-400 dark:text-gray-600"
+                className="h-8 md:h-10 mx-auto mb-2 text-gray-400 dark:text-gray-600"
                 viewBox="0 0 24 27"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
@@ -25,7 +27,7 @@ const Testimonial = () => {
                   fill="currentColor"
                 />
               </svg>
-              <p className="text-center text-lg">
+              <p className="text-center text-sm md:text-lg">
                 {`"I recently upgraded my gaming setup with a high-end graphics
                 card from your website. The performance boost is incredible! My
                 games run smoother, and the visuals are stunning. Thanks for the
@@ -38,7 +40,9 @@ const Testimonial = () => {
                     <img src="https://i.ibb.co/7jPqFQ1/sample-profile.png" />
                   </div>
                 </div>
-                <h1 className="text-xl font-semibold text-center">Sarah H.</h1>
+                <h1 className="text-base md:text-xl font-semibold text-center">
+                  Sarah H.
+                </h1>
               </div>
             </div>
             <div
@@ -46,7 +50,7 @@ const Testimonial = () => {
               className="bg-white dark:bg-gray-900 p-5 border-[1px] border-black text-black dark:text-white"
             >
               <svg
-                className="h-12 mx-auto mb-2 text-gray-400 dark:text-gray-600"
+                className="h-8 md:h-10 mx-auto mb-2 text-gray-400 dark:text-gray-600"
                 viewBox="0 0 24 27"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
@@ -56,7 +60,7 @@ const Testimonial = () => {
                   fill="currentColor"
                 />
               </svg>
-              <p className="text-center text-lg">
+              <p className="text-center text-sm md:text-lg">
                 {`"I had a few questions about a gaming laptop I was interested in, and your customer support team went above and beyond to provide detailed information and guidance. The laptop exceeded my expectations, and I'm a happy customer. You've earned my trust!"`}
               </p>
               <hr className="my-2" />
@@ -66,7 +70,9 @@ const Testimonial = () => {
                     <img src="https://i.ibb.co/7jPqFQ1/sample-profile.png" />
                   </div>
                 </div>
-                <h1 className="text-xl font-semibold text-center">Jason M.</h1>
+                <h1 className="text-base md:text-xl font-semibold text-center">
+                  Jason M.
+                </h1>
               </div>
             </div>
             <div
@@ -74,7 +80,7 @@ const Testimonial = () => {
               className="bg-white dark:bg-gray-900 p-5 border-[1px] border-black text-black dark:text-white"
             >
               <svg
-                className="h-12 mx-auto mb-2 text-gray-400 dark:text-gray-600"
+                className="h-8 md:h-10 mx-auto mb-2 text-gray-400 dark:text-gray-600"
                 viewBox="0 0 24 27"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
@@ -84,7 +90,7 @@ const Testimonial = () => {
                   fill="currentColor"
                 />
               </svg>
-              <p className="text-center text-lg">
+              <p className="text-center text-sm md:text-lg">
                 {`"I can't express how impressed I am with your service. My gaming mouse arrived two days after I placed the order. It's a fantastic product, and the smooth shopping experience on your user-friendly website was a bonus. I'll be back for more gear soon!"`}
               </p>
               <hr className="my-2" />
@@ -94,7 +100,9 @@ const Testimonial = () => {
                     <img src="https://i.ibb.co/7jPqFQ1/sample-profile.png" />
                   </div>
                 </div>
-                <h1 className="text-xl font-semibold text-center">Lisa W.</h1>
+                <h1 className="text-base md:text-xl font-semibold text-center">
+                  Lisa W.
+                </h1>
               </div>
             </div>
             <div
@@ -102,7 +110,7 @@ const Testimonial = () => {
               className="bg-white dark:bg-gray-900 p-5 border-[1px] border-black text-black dark:text-white"
             >
               <svg
-                className="h-12 mx-auto mb-2 text-gray-400 dark:text-gray-600"
+                className="h-8 md:h-10 mx-auto mb-2 text-gray-400 dark:text-gray-600"
                 viewBox="0 0 24 27"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
@@ -112,7 +120,7 @@ const Testimonial = () => {
                   fill="currentColor"
                 />
               </svg>
-              <p className="text-center text-lg">
+              <p className="text-center text-sm md:text-lg">
                 {`"As a budget-conscious gamer, I was pleasantly surprised by your competitive pricing. I found an excellent deal on a gaming headset, and it performs as well as pricier options I've tried. I appreciate the affordability without sacrificing quality. Keep up the good work!"`}
               </p>
               <hr className="my-2" />
@@ -122,7 +130,9 @@ const Testimonial = () => {
                     <img src="https://i.ibb.co/7jPqFQ1/sample-profile.png" />
                   </div>
                 </div>
-                <h1 className="text-xl font-semibold text-center">Mark R.</h1>
+                <h1 className="text-base md:text-xl font-semibold text-center">
+                  Mark R.
+                </h1>
               </div>
             </div>
           </div>

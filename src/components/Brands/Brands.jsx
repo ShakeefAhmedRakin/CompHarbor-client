@@ -23,7 +23,7 @@ const Brands = () => {
             <h1 className="text-center font-bold text-2xl md:text-4xl">
               Top Brands
             </h1>
-            <p className="max-w-4xl px-4 text-center mx-auto my-2">
+            <p className="max-w-4xl px-4 text-center mx-auto my-2 text-sm md:text-base">
               Explore the best in gaming tech. Discover our top brands, known
               for quality and performance.
             </p>

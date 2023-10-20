@@ -20,7 +20,7 @@ const Banner = () => {
                   Shop the Latest in Tech
                 </h1>
               </div>
-              <p className="text-lg px-4 md:px-12 text-center">
+              <p className="text-sm md:text-lg px-4 md:px-12 text-center">
                 Welcome to our online store, your one-stop destination for all
                 things tech. Explore a wide range of products, from cutting-edge
                 gadgets to essential accessories. Find the best deals and
