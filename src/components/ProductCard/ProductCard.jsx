@@ -7,15 +7,15 @@ import { Link } from "react-router-dom";
 const ProductCard = ({ product }) => {
   return (
     <>
-      <div className="flex flex-col justify-between w-full max-w-lg bg-gray-50 border-[1.5px] border-black dark:border-white shadow dark:bg-gray-800">
+      <div className="flex flex-col justify-between bg-gray-50 border-[1.5px] border-black dark:border-white shadow dark:bg-gray-800">
         <img
-          className="p-8 rounded-t-lg w-full h-[200px] lg:h-[320px] object-contain"
+          className="p-8 rounded-t-lg aspect-square h-[200px] lg:h-[320px] object-contain"
           src={product.product_image}
           alt="product image"
         />
 
         <div className="px-5 pb-5">
-          <div className="flex gap-4">
+          <div className="flex gap-1">
             <span className="badge my-4 font-bold">
               {product.product_brand}
             </span>

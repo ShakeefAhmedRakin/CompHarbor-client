@@ -58,6 +58,7 @@ const UpdateProduct = () => {
       .then((data) => {
         if (data.modifiedCount > 0) {
           toast.success("Product has been updated successfully");
+          e.reset();
         }
       });
   };
