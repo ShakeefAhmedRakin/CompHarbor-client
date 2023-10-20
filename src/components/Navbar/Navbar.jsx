@@ -3,8 +3,10 @@ import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../../providers/AuthProvider";
 import { PiComputerTowerBold } from "react-icons/pi";
 import "./Navbar.css";
+import { BsNintendoSwitch } from "react-icons/bs";
+import PropTypes from "prop-types";
 
-const Navbar = () => {
+const Navbar = ({ toggleTheme }) => {
   const { user, logOut } = useContext(AuthContext);
 
   const handleLogOut = () => {
@@ -67,7 +69,7 @@ const Navbar = () => {
             </label>
             <ul
               tabIndex={0}
-              className="text-lg space-y-4 dropdown-content mt-1 -ml-2 z-[2] p-4 shadow bg-primaryLight rounded-none w-screen"
+              className="text-lg space-y-4 dropdown-content mt-3 border-white border-[1px] -ml-2 z-50 p-4 shadow bg-primaryLight dark:bg-primaryDark rounded-none w-screen"
             >
               {user ? (
                 <>
@@ -89,6 +91,14 @@ const Navbar = () => {
             </ul>
           </div>
           <div className="hidden md:flex">{logo}</div>
+          <div className="ml-4">
+            <button
+              className="btn bg-transparent hover:bg-transparent hover:scale-[1.02] duration-300 rounded-none"
+              onClick={toggleTheme}
+            >
+              <BsNintendoSwitch className="text-3xl text-white"></BsNintendoSwitch>
+            </button>
+          </div>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="px-1 text-lg hidden lg:flex gap-6">{links}</ul>
@@ -128,6 +138,10 @@ const Navbar = () => {
       </div>
     </>
   );
+};
+
+Navbar.propTypes = {
+  toggleTheme: PropTypes.func,
 };
 
 export default Navbar;

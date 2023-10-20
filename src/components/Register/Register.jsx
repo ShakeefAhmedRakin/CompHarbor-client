@@ -29,19 +29,12 @@ const Register = () => {
     }
 
     createUser(email, password)
-      .then((result) => {
+      .then(() => {
         addUsernamePhoto(username, photoURL)
           .then(() => {
-            console.log("User has been registered successfully");
-            console.log("-------------------------------------");
-            console.log(result.user);
             logOut().then(() => {
-              console.log("User has been logged out successfully");
-              console.log("-------------------------------------");
               signInUser(email, password)
                 .then((result) => {
-                  console.log("User has been logged in successfully");
-                  console.log("-------------------------------------");
                   console.log(result.user);
                   toast.success("Successfully registered");
                 })
@@ -122,7 +115,7 @@ const Register = () => {
               <div className="flex justify-center">
                 <button
                   type="submit"
-                  className="btn bg-primaryLight hover:bg-primaryLight font-medium text-white"
+                  className="btn bg-primaryLight dark:bg-primaryDark hover:bg-primaryLight font-medium text-white"
                 >
                   Sign Up
                 </button>
