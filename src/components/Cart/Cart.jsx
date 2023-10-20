@@ -16,7 +16,7 @@ const Cart = () => {
 
   useEffect(() => {
     setLoading(true);
-    fetch(`http://localhost:5000/carts/${userID}`)
+    fetch(`https://brand-shop-server-rho.vercel.app/carts/${userID}`)
       .then((res) => res.json())
       .then((data) => {
         setProducts(data);
@@ -26,7 +26,7 @@ const Cart = () => {
 
   const handleDelete = (idToBeDeleted) => {
     console.log(idToBeDeleted);
-    fetch(`http://localhost:5000/carts/${idToBeDeleted}`, {
+    fetch(`https://brand-shop-server-rho.vercel.app/carts/${idToBeDeleted}`, {
       method: "DELETE",
     })
       .then((result) => result.json())

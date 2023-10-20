@@ -7,7 +7,7 @@ const Brands = () => {
 
   useEffect(() => {
     setLoading(true);
-    fetch("http://localhost:5000/brands")
+    fetch("https://brand-shop-server-rho.vercel.app/brands")
       .then((res) => res.json())
       .then((data) => {
         setBrands(data);

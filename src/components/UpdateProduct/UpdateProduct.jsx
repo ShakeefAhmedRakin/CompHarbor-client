@@ -21,7 +21,7 @@ const UpdateProduct = () => {
   const [rating, setRating] = useState(parseInt(product_rating));
 
   useEffect(() => {
-    fetch("http://localhost:5000/brands")
+    fetch("https://brand-shop-server-rho.vercel.app/brands")
       .then((res) => res.json())
       .then((data) => setBrands(data));
   }, []);
@@ -47,7 +47,7 @@ const UpdateProduct = () => {
       product_description,
     };
     // Sending data to server
-    fetch(`http://localhost:5000/product/${_id}`, {
+    fetch(`https://brand-shop-server-rho.vercel.app/product/${_id}`, {
       method: "PUT",
       headers: {
         "content-type": "application/json",
