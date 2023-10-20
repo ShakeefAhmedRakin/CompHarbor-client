@@ -18,14 +18,14 @@ const Brands = () => {
   return (
     <>
       <div className="px-2">
-        <div className="container mx-auto my-8 border-[1px] border-black dark:border-white">
+        <div className="container mx-auto my-8 border-[1px] border-black">
           <div className="bg-primaryLight dark:bg-primaryDark py-5 text-white">
             <h1 className="text-center font-bold text-2xl md:text-4xl">
-              Featured Brands
+              Top Brands
             </h1>
             <p className="max-w-4xl px-4 text-center mx-auto my-2">
-              Explore the best in gaming tech. Discover our featured brands,
-              known for quality and performance.
+              Explore the best in gaming tech. Discover our top brands, known
+              for quality and performance.
             </p>
           </div>
 
