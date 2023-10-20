@@ -45,7 +45,7 @@ const CartCard = ({ product, handleDelete }) => {
 
             <button
               onClick={() => handleDelete(product.cart_id)}
-              className="btn bg-primaryLight dark:bg-primaryDark hover:dark:bg-primaryDark text-white hover:bg-primaryLight"
+              className="btn border-none bg-primaryLight dark:bg-primaryDark hover:dark:bg-primaryDark text-white hover:bg-primaryLight"
             >
               Remove
             </button>

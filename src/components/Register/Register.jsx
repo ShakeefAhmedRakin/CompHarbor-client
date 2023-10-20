@@ -115,7 +115,7 @@ const Register = () => {
               <div className="flex justify-center">
                 <button
                   type="submit"
-                  className="btn bg-primaryLight dark:bg-primaryDark hover:bg-primaryLight font-medium text-white"
+                  className="btn bg-primaryLight border-none dark:bg-primaryDark hover:bg-primaryLight font-medium text-white"
                 >
                   Sign Up
                 </button>

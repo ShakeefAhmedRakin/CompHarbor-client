@@ -42,13 +42,13 @@ const ProductCard = ({ product }) => {
           </h1>
           <div className="flex justify-between mt-4">
             <Link to={`/update/${product._id}`}>
-              <button className="btn bg-primaryLight dark:bg-primaryDark hover:dark:bg-primaryDark text-white hover:bg-primaryLight">
+              <button className="btn border-none bg-primaryLight dark:bg-primaryDark hover:dark:bg-primaryDark text-white hover:bg-primaryLight">
                 Update
               </button>
             </Link>
 
             <Link to={`/product/${product._id}`}>
-              <button className="btn bg-primaryLight dark:bg-primaryDark hover:dark:bg-primaryDark text-white hover:bg-primaryLight">
+              <button className="btn border-none bg-primaryLight dark:bg-primaryDark hover:dark:bg-primaryDark text-white hover:bg-primaryLight">
                 Details
               </button>
             </Link>

@@ -11,9 +11,11 @@ const Login = () => {
     signInWithGoogle()
       .then((result) => {
         console.log(result.user);
-        // TOAST HERE
+        toast.success("Successfully logged in");
       })
-      .catch((error) => console.log(error));
+      .catch((error) => {
+        toast.error(error.message);
+      });
   };
 
   const handleLogin = (e) => {
@@ -68,7 +70,7 @@ const Login = () => {
               <div className="flex justify-center">
                 <button
                   type="submit"
-                  className="btn bg-primaryLight dark:bg-primaryDark hover:dark:bg-primaryDark text-white hover:bg-primaryLight font-medium"
+                  className="btn border-none bg-primaryLight dark:bg-primaryDark hover:dark:bg-primaryDark text-white hover:bg-primaryLight font-medium"
                 >
                   Login
                 </button>
@@ -86,7 +88,7 @@ const Login = () => {
             </h1>
             <div className="flex justify-center text-black dark:text-white">
               <button
-                className="btn btn-circle bg-primaryLight dark:bg-primaryDark text-white hover:bg-primaryLight"
+                className="btn btn-circle border-none bg-primaryLight dark:bg-primaryDark text-white hover:bg-primaryLight"
                 onClick={handleGoogleSignIn}
               >
                 <RiGoogleLine className="text-xl"></RiGoogleLine>

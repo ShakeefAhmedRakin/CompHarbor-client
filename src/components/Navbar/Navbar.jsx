@@ -38,7 +38,7 @@ const Navbar = ({ toggleTheme }) => {
 
   const logo = (
     <>
-      <a className="btn bg-transparent hover:bg-transparent hover:border-white hover:scale-[1.02] normal-case text-2xl border-[1px] border-white rounded-none">
+      <a className="btn bg-transparent hover:bg-transparent  hover:border-white hover:scale-[1.02] normal-case text-2xl border-[1px] border-white rounded-none">
         <h1 className="font-normal text-white tracking-widest flex items-center gap-x-1">
           <PiComputerTowerBold></PiComputerTowerBold>Comp Harbor
         </h1>
@@ -93,7 +93,7 @@ const Navbar = ({ toggleTheme }) => {
           <div className="hidden md:flex">{logo}</div>
           <div className="ml-4">
             <button
-              className="btn bg-transparent hover:bg-transparent hover:scale-[1.02] duration-300 rounded-none"
+              className="btn bg-transparent hover:bg-transparent border-white hover:border-white border-[1px] duration-300 rounded-none"
               onClick={toggleTheme}
             >
               <BsNintendoSwitch className="text-3xl text-white"></BsNintendoSwitch>

@@ -29,7 +29,7 @@ const Brands = () => {
             </p>
           </div>
 
-          <div className="flex justify-center py-10 px-10 bg-white dark:bg-gray-900">
+          <div className="flex justify-center py-10 px-10 bg-white dark:bg-slate-900">
             {loading ? (
               <>
                 <div className="flex items-center justify-center py-36">

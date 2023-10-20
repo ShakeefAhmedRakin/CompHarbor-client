@@ -9,10 +9,10 @@ const BrandCard = ({ brand }) => {
           <div className="relative flex items-center group">
             <img
               src={brand.image}
-              className="h-full w-full aspect-square object-cover filter blur-[1px] transition-filter duration-500 group-hover:blur-0"
+              className="h-full w-full aspect-square object-cover filter transition-filter duration-500"
             />
-            <div className="bg-black bg-opacity-70 h-full w-full absolute opacity-100 group-hover:opacity-0 transition-opacity duration-300 flex items-center justify-center">
-              <h1 className="text-center text-white font-extrabold text-2xl xl:text-4xl">
+            <div className="bg-black bg-opacity-60 bottom-0 w-full absolute opacity-100 group-hover:opacity-0 transition-opacity duration-300 flex items-center justify-center py-2">
+              <h1 className="text-center text-white font-bold text-2xl xl:text-2xl">
                 {brand.name}
               </h1>
             </div>

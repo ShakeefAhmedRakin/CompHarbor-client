@@ -27,7 +27,7 @@ const Banner = () => {
                 to="/register"
                 className="btn hover:scale-[1.02] bg-white hover:bg-white hover:border-none border-black border-none rounded-none font-bold text-black"
               >
-                Get Started
+                Sign Up
               </Link>
             </div>
           </div>

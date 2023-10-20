@@ -178,7 +178,7 @@ const AddProduct = () => {
               <div className="flex justify-center">
                 <button
                   type="submit"
-                  className="btn bg-primaryLight hover:bg-primaryLight dark:bg-primaryDark dark:hover:bg-primaryDark font-medium text-white"
+                  className="btn border-none bg-primaryLight hover:bg-primaryLight dark:bg-primaryDark dark:hover:bg-primaryDark font-medium text-white"
                 >
                   Add Product
                 </button>
