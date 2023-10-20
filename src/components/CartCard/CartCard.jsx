@@ -33,7 +33,7 @@ const CartCard = ({ product, handleDelete }) => {
               value={parseInt(product.product_rating)}
               readOnly
             />
-            <span className="bg-blue-100 pt-1 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded dark:bg-blue-200 dark:text-blue-800 ml-3">
+            <span className="bg-blue-100 dark:bg-primaryDark pt-1 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded dark:text-white ml-3">
               {product.product_rating}.0
             </span>
           </div>
@@ -45,7 +45,7 @@ const CartCard = ({ product, handleDelete }) => {
 
             <button
               onClick={() => handleDelete(product.cart_id)}
-              className="btn bg-primaryLight text-white hover:bg-primaryLight"
+              className="btn bg-primaryLight dark:bg-primaryDark hover:dark:bg-primaryDark text-white hover:bg-primaryLight"
             >
               Remove
             </button>
