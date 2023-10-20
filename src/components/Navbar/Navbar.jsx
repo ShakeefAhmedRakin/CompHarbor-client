@@ -93,12 +93,12 @@ const Navbar = ({ toggleTheme }) => {
             </ul>
           </div>
           <div className="hidden md:flex">{logo}</div>
-          <div className="ml-4">
+          <div className="flex items-center ml-2 md:ml-4">
             <button
-              className="btn bg-transparent hover:bg-transparent border-white hover:border-white border-[1px] duration-300 rounded-none"
+              className="btn btn-sm md:btn-md bg-transparent hover:bg-transparent border-white hover:border-white border-[1px] duration-300 rounded-none"
               onClick={toggleTheme}
             >
-              <BsNintendoSwitch className="text-3xl text-white"></BsNintendoSwitch>
+              <BsNintendoSwitch className="text-xl md:text-3xl text-white"></BsNintendoSwitch>
             </button>
           </div>
         </div>
