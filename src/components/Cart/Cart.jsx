@@ -12,8 +12,6 @@ const Cart = () => {
 
   const [products, setProducts] = useState([]);
 
-  console.log(products);
-
   useEffect(() => {
     setLoading(true);
     fetch(`https://brand-shop-server-rho.vercel.app/carts/${userID}`)
@@ -25,23 +23,21 @@ const Cart = () => {
   }, [userID]);
 
   const handleDelete = (idToBeDeleted) => {
-    console.log(idToBeDeleted);
     fetch(`https://brand-shop-server-rho.vercel.app/carts/${idToBeDeleted}`, {
       method: "DELETE",
     })
       .then((result) => result.json())
       .then((data) => {
-        console.log(data.deletedCount);
         if (data.deletedCount > 0) {
           toast.success("Item removed from cart");
-          // Update the UI by removing the deleted item from the local state
-          setProducts((prevProducts) =>
-            prevProducts.filter((product) => product.cart_id !== idToBeDeleted)
+
+          const remaining = products.filter(
+            (product) => product.cart_id !== idToBeDeleted
           );
+          setProducts(remaining);
         }
       });
   };
-  console.log(products);
   return (
     <>
       <Toaster position="bottom-right" richColors />
@@ -64,7 +60,7 @@ const Cart = () => {
                   <div className="w-full lg:w-fit grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
                     {products.map((product) => (
                       <CartCard
-                        key={product._id}
+                        key={product.cart_id}
                         product={product}
                         handleDelete={handleDelete}
                       ></CartCard>

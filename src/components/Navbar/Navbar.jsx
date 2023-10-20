@@ -5,6 +5,7 @@ import { PiComputerTowerBold } from "react-icons/pi";
 import "./Navbar.css";
 import { BsNintendoSwitch } from "react-icons/bs";
 import PropTypes from "prop-types";
+import { Toaster, toast } from "sonner";
 
 const Navbar = ({ toggleTheme }) => {
   const { user, logOut } = useContext(AuthContext);
@@ -12,7 +13,7 @@ const Navbar = ({ toggleTheme }) => {
   const handleLogOut = () => {
     logOut()
       .then(() => {
-        console.log("User Logged Out");
+        toast.success("Successfully logged out");
       })
       .catch((error) => console.log(error));
   };
@@ -48,6 +49,7 @@ const Navbar = ({ toggleTheme }) => {
 
   return (
     <>
+      <Toaster position="bottom-right" richColors />
       <div className="navbar bg-primaryLight dark:bg-primaryDark">
         <div className="navbar-start">
           <div className="dropdown">

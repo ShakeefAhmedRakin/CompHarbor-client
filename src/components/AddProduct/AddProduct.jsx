@@ -12,8 +12,6 @@ const AddProduct = () => {
       .then((data) => setBrands(data));
   }, []);
 
-  console.log(brands);
-
   const handleAddProduct = (e) => {
     e.preventDefault();
     const form = e.target;
@@ -35,10 +33,6 @@ const AddProduct = () => {
       product_description,
     };
 
-    console.log("--------------------------------");
-    console.log(newProduct);
-    console.log("--------------------------------");
-
     fetch("https://brand-shop-server-rho.vercel.app/products", {
       method: "POST",
       headers: {
@@ -48,7 +42,6 @@ const AddProduct = () => {
     })
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
         if (data.insertedId) {
           toast.success("Product has been added successfully");
         }
