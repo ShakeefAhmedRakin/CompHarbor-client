@@ -1,10 +1,12 @@
 import { useEffect, useState } from "react";
-import { useLoaderData } from "react-router-dom";
+import { useLoaderData, useNavigate } from "react-router-dom";
 import { Toaster, toast } from "sonner";
 import { Rating } from "@smastrom/react-rating";
 
 const UpdateProduct = () => {
   const [brands, setBrands] = useState([]);
+
+  const navigate = useNavigate();
 
   const existingDetails = useLoaderData();
   const {
@@ -57,8 +59,12 @@ const UpdateProduct = () => {
       .then((res) => res.json())
       .then((data) => {
         if (data.modifiedCount > 0) {
-          toast.success("Product has been updated successfully");
-          e.reset();
+          toast.success(
+            "Product has been updated successfully. Redirecting..."
+          );
+          setTimeout(() => {
+            navigate(-1);
+          }, 2000);
         }
       });
   };

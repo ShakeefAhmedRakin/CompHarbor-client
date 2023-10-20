@@ -1,11 +1,13 @@
 import { useContext } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../providers/AuthProvider";
 import { Toaster, toast } from "sonner";
 
 const Register = () => {
   const { createUser, addUsernamePhoto, signInUser, logOut } =
     useContext(AuthContext);
+
+  const navigate = useNavigate();
 
   const handleSignUp = (e) => {
     e.preventDefault();
@@ -36,7 +38,11 @@ const Register = () => {
               signInUser(email, password)
                 .then((result) => {
                   console.log(result.user);
-                  toast.success("Successfully registered");
+                  toast.success("Successfully registered. Redirecting...");
+                  e.target.reset();
+                  setTimeout(() => {
+                    navigate("/");
+                  }, 2000);
                 })
                 .catch((error) => {
                   console.log("Error from logging in user" + error);

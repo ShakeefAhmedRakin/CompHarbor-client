@@ -1,17 +1,21 @@
 import { useContext } from "react";
 import { RiGoogleLine } from "react-icons/ri";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../providers/AuthProvider";
 import { Toaster, toast } from "sonner";
 
 const Login = () => {
   const { signInUser, signInWithGoogle } = useContext(AuthContext);
+  const navigate = useNavigate();
 
   const handleGoogleSignIn = () => {
     signInWithGoogle()
       .then((result) => {
         console.log(result.user);
-        toast.success("Successfully logged in");
+        toast.success("Successfully logged in. Redirecting...");
+        setTimeout(() => {
+          navigate("/");
+        }, 2000);
       })
       .catch((error) => {
         toast.error(error.message);
@@ -25,7 +29,11 @@ const Login = () => {
 
     signInUser(email, password)
       .then(() => {
-        toast.success("Successfully logged in");
+        toast.success("Successfully logged in. Redirecting...");
+        e.target.reset();
+        setTimeout(() => {
+          navigate("/");
+        }, 2000);
       })
       .catch((error) => {
         toast.error(error.message);

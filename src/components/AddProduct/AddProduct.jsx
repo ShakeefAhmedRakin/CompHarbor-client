@@ -1,10 +1,12 @@
 import { useEffect, useState } from "react";
 import { Toaster, toast } from "sonner";
 import { Rating } from "@smastrom/react-rating";
+import { useNavigate } from "react-router-dom";
 
 const AddProduct = () => {
   const [brands, setBrands] = useState([]);
   const [rating, setRating] = useState(0);
+  const navigate = useNavigate();
 
   useEffect(() => {
     fetch("https://brand-shop-server-rho.vercel.app/brands")
@@ -43,7 +45,10 @@ const AddProduct = () => {
       .then((res) => res.json())
       .then((data) => {
         if (data.insertedId) {
-          toast.success("Product has been added successfully");
+          toast.success("Product has been added successfully. Redirecting...");
+          setTimeout(() => {
+            navigate(`/products/${product_brand}`);
+          }, 2000);
         }
       });
   };
