@@ -66,7 +66,7 @@ const UpdateProduct = () => {
   return (
     <>
       <Toaster position="bottom-right" richColors />
-      <div className="container mx-auto px-4 py-20">
+      <div data-aos="fade-up" className="container mx-auto px-4 py-20">
         <div className="max-w-6xl mx-auto">
           <div className="border-[1px] border-black px-8 py-4 bg-white dark:bg-gray-800">
             <form

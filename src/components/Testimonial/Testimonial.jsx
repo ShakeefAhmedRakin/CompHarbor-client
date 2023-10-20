@@ -10,7 +10,10 @@ const Testimonial = () => {
             <p className="text-white text-center text-lg">and counting...</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 p-2 lg:px-12">
-            <div className="bg-white dark:bg-gray-900 p-5 border-[1px] border-black text-black dark:text-white">
+            <div
+              data-aos="flip-up"
+              className="bg-white dark:bg-gray-900 p-5 border-[1px] border-black text-black dark:text-white"
+            >
               <svg
                 className="h-12 mx-auto mb-2 text-gray-400 dark:text-gray-600"
                 viewBox="0 0 24 27"
@@ -38,7 +41,10 @@ const Testimonial = () => {
                 <h1 className="text-xl font-semibold text-center">Sarah H.</h1>
               </div>
             </div>
-            <div className="bg-white dark:bg-gray-900 p-5 border-[1px] border-black text-black dark:text-white">
+            <div
+              data-aos="flip-up"
+              className="bg-white dark:bg-gray-900 p-5 border-[1px] border-black text-black dark:text-white"
+            >
               <svg
                 className="h-12 mx-auto mb-2 text-gray-400 dark:text-gray-600"
                 viewBox="0 0 24 27"
@@ -63,7 +69,10 @@ const Testimonial = () => {
                 <h1 className="text-xl font-semibold text-center">Jason M.</h1>
               </div>
             </div>
-            <div className="bg-white dark:bg-gray-900 p-5 border-[1px] border-black text-black dark:text-white">
+            <div
+              data-aos="flip-up"
+              className="bg-white dark:bg-gray-900 p-5 border-[1px] border-black text-black dark:text-white"
+            >
               <svg
                 className="h-12 mx-auto mb-2 text-gray-400 dark:text-gray-600"
                 viewBox="0 0 24 27"
@@ -88,7 +97,10 @@ const Testimonial = () => {
                 <h1 className="text-xl font-semibold text-center">Lisa W.</h1>
               </div>
             </div>
-            <div className="bg-white dark:bg-gray-900 p-5 border-[1px] border-black text-black dark:text-white">
+            <div
+              data-aos="flip-up"
+              className="bg-white dark:bg-gray-900 p-5 border-[1px] border-black text-black dark:text-white"
+            >
               <svg
                 className="h-12 mx-auto mb-2 text-gray-400 dark:text-gray-600"
                 viewBox="0 0 24 27"

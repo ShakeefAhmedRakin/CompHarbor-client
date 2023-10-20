@@ -13,7 +13,7 @@ const Faq = () => {
           <div className="flex justify-center py-10 px-5 lg:px-10 bg-white dark:bg-gray-900">
             <div className="flex flex-col-reverse lg:flex-row gap-12">
               <div className="flex flex-col w-full gap-4 text-black dark:text-white flex-1">
-                <div className="flex flex-col gap-y-4">
+                <div data-aos="flip-left" className="flex flex-col gap-y-4">
                   <hr />
                   <h1 className="text-2xl font-bold text-left flex items-center gap-x-3">
                     <MdOutlineQuestionAnswer></MdOutlineQuestionAnswer>What
@@ -27,7 +27,7 @@ const Faq = () => {
                   </p>
                   <hr />
                 </div>
-                <div className="flex flex-col gap-y-4">
+                <div data-aos="flip-left" className="flex flex-col gap-y-4">
                   <hr />
                   <h1 className="text-2xl font-bold text-left flex items-center gap-x-3">
                     <MdOutlineQuestionAnswer></MdOutlineQuestionAnswer>What is
@@ -42,7 +42,7 @@ const Faq = () => {
                   </p>
                   <hr />
                 </div>
-                <div className="flex flex-col gap-y-4">
+                <div data-aos="flip-left" className="flex flex-col gap-y-4">
                   <hr />
                   <h1 className="text-2xl font-bold text-left flex items-center gap-x-3">
                     <MdOutlineQuestionAnswer></MdOutlineQuestionAnswer>How can I
@@ -53,7 +53,7 @@ const Faq = () => {
                   </p>
                   <hr />
                 </div>
-                <div className="flex flex-col gap-y-4">
+                <div data-aos="flip-left" className="flex flex-col gap-y-4">
                   <hr />
                   <h1 className="text-2xl font-bold text-left flex items-center gap-x-3">
                     <MdOutlineQuestionAnswer></MdOutlineQuestionAnswer>How can I
@@ -65,7 +65,10 @@ const Faq = () => {
                   <hr />
                 </div>
               </div>
-              <div className="border-[1px] border-black flex-1">
+              <div
+                data-aos="zoom-in"
+                className="border-[1px] border-black flex-1"
+              >
                 <img
                   src="https://i.ibb.co/8bqYCHr/pexels-luis-quintero-2148216.jpg"
                   className="object-cover object-center aspect-video lg:aspect-square h-full"

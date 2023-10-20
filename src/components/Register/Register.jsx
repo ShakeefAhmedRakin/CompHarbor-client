@@ -54,7 +54,7 @@ const Register = () => {
   return (
     <>
       <Toaster position="bottom-right" richColors />
-      <div className="container mx-auto px-4 py-20">
+      <div data-aos="flip-right" className="container mx-auto px-4 py-20">
         <div className="max-w-lg mx-auto">
           <div className="border-[1px] border-black p-8 bg-white dark:bg-gray-800">
             <form
