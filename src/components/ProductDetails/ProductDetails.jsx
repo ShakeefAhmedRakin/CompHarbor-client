@@ -64,9 +64,12 @@ const ProductDetails = () => {
       ) : (
         <div>
           <Toaster position="bottom-right" richColors />
-          <h1>DETAILS</h1>
+
           <div className="container px-2 mx-auto my-8 p-8">
             <div className="w-full h-fit bg-white border border-gray-200 shadow dark:bg-gray-800 dark:border-gray-700 p-4">
+              <h1 className="bg-primaryLight dark:bg-primaryDark py-5 text-center my-5 font-bold text-4xl text-white">
+                Product Details
+              </h1>
               <div className="flex flex-col lg:flex-row w-full h-full bg-gray-100 dark:bg-gray-900 ">
                 <img
                   className="w-full object-contain max-w-lg h-96 p-8"
@@ -102,7 +105,7 @@ const ProductDetails = () => {
                     </h1>
                     <button
                       onClick={handleAddToCart}
-                      className="btn bg-primaryLight text-white hover:bg-primaryLight"
+                      className="btn bg-primaryLight dark:bg-primaryDark dark:hover:bg-primaryDark text-white hover:bg-primaryLight"
                     >
                       Add to cart
                     </button>
