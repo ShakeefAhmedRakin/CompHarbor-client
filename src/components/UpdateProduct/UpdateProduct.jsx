@@ -17,7 +17,6 @@ const UpdateProduct = () => {
     product_type,
     product_price,
     product_rating,
-    product_description,
   } = existingDetails;
 
   const [rating, setRating] = useState(parseInt(product_rating));
@@ -36,7 +35,6 @@ const UpdateProduct = () => {
     const product_brand = form.brand.value;
     const product_type = form.type.value;
     const product_price = form.price.value;
-    const product_description = form.description.value;
     const product_rating = rating;
 
     const updatedProduct = {
@@ -46,7 +44,6 @@ const UpdateProduct = () => {
       product_type,
       product_price,
       product_rating,
-      product_description,
     };
     // Sending data to server
     fetch(`https://brand-shop-server-rho.vercel.app/product/${_id}`, {
@@ -183,21 +180,6 @@ const UpdateProduct = () => {
                     defaultValue={product_image}
                   />
                 </div>
-              </div>
-
-              <div className="mb-6">
-                <label className="block mb-2 text-sm font-medium text-black dark:text-white">
-                  Short description
-                </label>
-                <textarea
-                  type="text"
-                  name="description"
-                  className="bg-gray-50 dark:bg-gray-900 border border-gray-300 dark:border-gray-900 text-gray-900 text-sm rounded-lg block w-full p-2.5 dark:text-white"
-                  placeholder="Short description"
-                  required
-                  rows={10}
-                  defaultValue={product_description}
-                />
               </div>
 
               <div className="flex justify-center">
