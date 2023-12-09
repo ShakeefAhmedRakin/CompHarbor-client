@@ -1,6 +1,15 @@
 Website Name : Computer Harbor <br>
 Live Link: https://bytebrilliance-5c61e.web.app/
 
+# Technologies
+<p align="left">
+  <a href="https://skillicons.dev">
+    <img src="https://skillicons.dev/icons?i=firebase,mongodb,react,tailwind,express,nodejs&perline=8" />
+  </a>
+</p>
+
+# Features
+
 1. **Theme Switcher**:
    For the website's user interface, I incorporated a theme switcher feature, enabling users to seamlessly switch between light and dark themes. This was achieved by using Tailwind dark classes.
 
